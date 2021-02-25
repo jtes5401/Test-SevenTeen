@@ -15,6 +15,7 @@
 		EEA14E5525E6A4AF0095502B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEA14E5325E6A4AF0095502B /* LaunchScreen.storyboard */; };
 		EEA14E6025E6A4B00095502B /* SeventeenTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA14E5F25E6A4B00095502B /* SeventeenTestTests.swift */; };
 		EEA14E6B25E6A4B00095502B /* SeventeenTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA14E6A25E6A4B00095502B /* SeventeenTestUITests.swift */; };
+		EEA14E8225E6A9CD0095502B /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA14E8125E6A9CD0095502B /* DataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		EEA14E6625E6A4B00095502B /* SeventeenTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeventeenTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEA14E6A25E6A4B00095502B /* SeventeenTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeventeenTestUITests.swift; sourceTree = "<group>"; };
 		EEA14E6C25E6A4B00095502B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEA14E8125E6A9CD0095502B /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				EEA14E4E25E6A4AD0095502B /* Main.storyboard */,
 				EEA14E5125E6A4AF0095502B /* Assets.xcassets */,
 				EEA14E5325E6A4AF0095502B /* LaunchScreen.storyboard */,
+				EEA14E8125E6A9CD0095502B /* DataModel.swift */,
 				EEA14E5625E6A4AF0095502B /* Info.plist */,
 			);
 			path = SeventeenTest;
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEA14E8225E6A9CD0095502B /* DataModel.swift in Sources */,
 				EEA14E4D25E6A4AD0095502B /* ViewController.swift in Sources */,
 				EEA14E4925E6A4AD0095502B /* AppDelegate.swift in Sources */,
 				EEA14E4B25E6A4AD0095502B /* SceneDelegate.swift in Sources */,
