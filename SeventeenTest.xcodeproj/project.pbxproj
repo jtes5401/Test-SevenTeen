@@ -58,6 +58,7 @@
 		EEA14E8125E6A9CD0095502B /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		EEA14E8625E6B6960095502B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		EEA14E9725E6C01A0095502B /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		EEA14EB825E79FF10095502B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +92,7 @@
 		EEA14E3C25E6A4AD0095502B = {
 			isa = PBXGroup;
 			children = (
+				EEA14EB825E79FF10095502B /* README.md */,
 				EEA14E4725E6A4AD0095502B /* SeventeenTest */,
 				EEA14E5E25E6A4B00095502B /* SeventeenTestTests */,
 				EEA14E6925E6A4B00095502B /* SeventeenTestUITests */,
