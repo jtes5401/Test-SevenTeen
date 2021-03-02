@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.collectionView.backgroundColor = .clear
         self.collectionView.dataSource = self
+        self.collectionView.delegate = self
         self.collectionView.contentInset = .init(top: 0, left: 10, bottom: 0, right: 10)
         self.collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
         if let collectionViewLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
@@ -30,6 +31,7 @@ class ViewController: UIViewController {
         self.searchBar.delegate = self
         self.view.addSubview(self.searchBar)
         self.model.callback = self.collectionView.reloadData
+        self.model.pageFetchCallback = pageFetchFinish(pageIndex:)
     }
     
     override func viewDidLayoutSubviews() {
@@ -44,22 +46,36 @@ class ViewController: UIViewController {
             make.bottom.left.right.equalToSuperview()
         }
     }
+    
+    func pageFetchFinish(pageIndex:Int) {
+        collectionView.reloadSections(IndexSet(integer: pageIndex))
+    }
 }
 
 extension ViewController: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 999
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return model.dataCount
+        return model.getDataCountOfPage(pageIndex: section)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
         if let c = cell as? CollectionViewCell {
-            if let user = model.getUser(userIndex: indexPath.item){
+            if let user = model.getUser(pageIndex: indexPath.section ,userIndex: indexPath.item){
                 c.nameLabel.text = user.login
                 c.avatarImageView.sd_setImage(with: user.avatar_url, completed: nil)
             }
         }
         return cell
+    }
+}
+
+extension ViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        model.fetchUserOfPage(pageIndex: indexPath.section,userIndex: indexPath.item)
     }
 }
 
